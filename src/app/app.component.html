@@ -5,32 +5,32 @@
 
     <!-- user interface -->
     <div gdArea="topLeft" class="green">
-      <input id="topLeftVisibility" name="topLeftVisibility" type="checkbox" [(ngModel)]="topLeftVisibility" />
+      <input id="topLeftVisibility" name="topLeftVisibility" type="checkbox" [(ngModel)]="state.topLeftVisibility" />
       <label for="topLeftVisibility">Visability</label>
     </div>
 
     <div gdArea="topMiddle" class="blue">
-      <input id="topMiddleVisibility" name="topMiddleVisibility" type="checkbox" [(ngModel)]="topMiddleVisibility" />
+      <input id="topMiddleVisibility" name="topMiddleVisibility" type="checkbox" [(ngModel)]="state.topMiddleVisibility" />
       <label for="topMiddleVisibility">Visability</label>
     </div>
 
     <div gdArea="topRight" class="grey">
-      <input id="topRightVisibility" name="topRightVisibility" type="checkbox" [(ngModel)]="topRightVisibility" />
+      <input id="topRightVisibility" name="topRightVisibility" type="checkbox" [(ngModel)]="state.topRightVisibility" />
       <label for="topRightVisibility">Visability</label>
     </div>
 
     <div gdArea="middleRight" class="red">
-      <input id="middleRightVisibility" name="middleRightVisibility" type="checkbox" [(ngModel)]="middleRightVisibility" />
+      <input id="middleRightVisibility" name="middleRightVisibility" type="checkbox" [(ngModel)]="state.middleRightVisibility" />
       <label for="middleRightVisibility">Visability</label>
     </div>
 
     <div gdArea="bottomLeft" class="wheat">
-      <input id="bottomLeftVisibility" name="bottomLeftVisibility" type="checkbox" [(ngModel)]="bottomLeftVisibility" />
+      <input id="bottomLeftVisibility" name="bottomLeftVisibility" type="checkbox" [(ngModel)]="state.bottomLeftVisibility" />
       <label for="bottomLeftVisibility">Visability</label>
     </div>
 
     <div gdArea="bottomRight" class="yellow">
-      <input id="bottomRightVisibility" name="bottomRightVisibility" type="checkbox" [(ngModel)]="bottomRightVisibility" />
+      <input id="bottomRightVisibility" name="bottomRightVisibility" type="checkbox" [(ngModel)]="state.bottomRightVisibility" />
       <label for="bottomRightVisibility">Visability</label>
     </div>
 
@@ -43,27 +43,27 @@
 
 <!-- preview -->
 <div *ngIf="gridAreas !== ''" [gdAreas]="gridAreas" gdGap="5px" gdRows="30fr 10fr 60fr " gdColumns="20fr 40fr 20fr 20fr" class="grid">
-  <div gdArea="topLeft" *ngIf="topLeftVisibility" class="green">
+  <div gdArea="topLeft" *ngIf="previewState.topLeftVisibility" class="green">
     topLeft
   </div>
 
-  <div gdArea="topMiddle" *ngIf="topMiddleVisibility" class="blue">
+  <div gdArea="topMiddle" *ngIf="previewState.topMiddleVisibility" class="blue">
     topMiddle
   </div>
 
-  <div gdArea="topRight" *ngIf="topRightVisibility" class="grey">
+  <div gdArea="topRight" *ngIf="previewState.topRightVisibility" class="grey">
     topRight
   </div>
 
-  <div gdArea="middleRight" *ngIf="middleRightVisibility" class="red">
+  <div gdArea="middleRight" *ngIf="previewState.middleRightVisibility" class="red">
     middleRight
   </div>
 
-  <div gdArea="bottomLeft" *ngIf="bottomLeftVisibility" class="wheat">
+  <div gdArea="bottomLeft" *ngIf="previewState.bottomLeftVisibility" class="wheat">
     bottomLeft
   </div>
 
-  <div gdArea="bottomRight" *ngIf="bottomRightVisibility" class="yellow">
+  <div gdArea="bottomRight" *ngIf="previewState.bottomRightVisibility" class="yellow">
     bottomRight
   </div>
 
